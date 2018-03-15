@@ -39,6 +39,12 @@ class Home extends Component {
 		this.pickNewQuestion()
 	}
 
+	changeMode(hiragana) {
+		const mode = hiragana ? 'hiragana' : 'katakana'
+		if(this.state.userChoice === mode) return
+		this.setState({userChoice: mode}, () => this.pickNewQuestion())
+	}
+
 	render() {
 		const { score, lives, question, options, hiragana } = this.state
 		return(
