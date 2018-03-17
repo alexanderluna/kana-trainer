@@ -8,9 +8,9 @@ class Home extends Component {
 		this.state = {
 			answer: 1,
 			userChoice: 'hiragana',
-			lives: 5,
-			options: ['1','2','3','4'],
-			question: '1',
+			lifes: 5,
+			options: ['か','き','く','け'],
+			question: 'ki',
 			score: 0
 		}
 	}
@@ -20,7 +20,7 @@ class Home extends Component {
 	}
 
 	removeLife() {
-		this.setState(prev => ({lives: prev.lives - 1}))
+		this.setState(prev => ({lifes: prev.lifes - 1}))
 	}
 
 	pickNewQuestion() {
@@ -33,10 +33,15 @@ class Home extends Component {
 		})
 	}
 
+	resetStats() {
+		this.setState({score: 0, lifes: 5})
+	}
+
 	check(choice) {
-		const { options, answer } = this.state
+		const { options, answer, lifes } = this.state
 		choice === options[answer] ? this.incrementScore() : this.removeLife()
 		this.pickNewQuestion()
+		if(lifes === 0) this.resetStats()
 	}
 
 	changeMode(hiragana) {
@@ -46,11 +51,11 @@ class Home extends Component {
 	}
 
 	render() {
-		const { score, lives, question, options, hiragana } = this.state
+		const { score, lifes, question, options, hiragana } = this.state
 		return(
 			<div className="card">
 				<h2>Score: {score}</h2>
-				<h2>Lifes: {lives}</h2>
+				<h2>Lifes: {lifes}</h2>
 				<h2 className="display">{question}</h2>
 				<h3>{hiragana ? 'Translate Hiragana' : 'Translate Katakana'}</h3>
 				<div className="buttonGroup">
