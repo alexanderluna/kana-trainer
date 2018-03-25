@@ -44,9 +44,8 @@ class Home extends Component {
 		if(lifes === 0) this.resetStats()
 	}
 
-	changeMode(hiragana) {
-		const mode = hiragana ? 'hiragana' : 'katakana'
-		if(this.state.userChoice === mode) return
+	changeMode(newChoice) {
+		if(this.state.userChoice === newChoice) return
 		this.setState({userChoice: mode}, () => this.pickNewQuestion())
 	}
 
@@ -59,13 +58,13 @@ class Home extends Component {
 				<h2 className="display">{question}</h2>
 				<h3>{hiragana ? 'Translate Hiragana' : 'Translate Katakana'}</h3>
 				<div className="buttonGroup">
-				{options.map((choice, id) =>
-					<button key={id} onClick={event => this.check(choice)}>{choice}</button>
-				)}
+					{options.map((choice, id) =>
+						<button key={id} onClick={event => this.check(choice)}>{choice}</button>
+					)}
 				</div>
 				<h3>Choose what to learn</h3>
-				<button className="option" onClick={event => this.changeMode(true)}>Hiragana</button>
-				<button className="option" onClick={event => this.changeMode(false)}>Katakana</button>
+				<button className="option" onClick={event => this.changeMode('hiragana')}>Hiragana</button>
+				<button className="option" onClick={event => this.changeMode('katakana')}>Katakana</button>
 			</div>
 		)
 	}
