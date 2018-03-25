@@ -1,3 +1,4 @@
+/* Element Styling */
 html {
 	color: whitesmoke;
 	overflow: hidden;
@@ -12,13 +13,14 @@ h2 {
 	width: 50%;
 }
 
+/* Class Styling */
+
 .card {
 	padding: 1rem;
 	border: 0.1rem solid white;
 	border-radius: 0.2rem;
 	text-align: center;
 }
-
 .display {
 	margin: 0.5rem auto;
 	width: 100%;
@@ -27,11 +29,9 @@ h2 {
 	border-radius: 0.2rem;
 	color: #ff6060;
 }
-
 .buttonGroup {
 	margin: auto;
 }
-
 .buttonGroup button {
 	margin: 0.2rem;
 	width: calc(100%/2 - 0.4rem);
@@ -41,7 +41,6 @@ h2 {
 	font-size: 4rem;
 	color: #fff;
 }
-
 .option {
 	margin: 0.5rem 0.2rem;
 	width: calc(50% - 0.4rem);
@@ -57,7 +56,6 @@ h2 {
 	.buttonGroup button {
 		width: calc(100vw/2 - 1.5rem);
 	}
-
 	.card {
 		width: calc(100vw - 2.2rem);
 		border: 0rem;
