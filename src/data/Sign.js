@@ -100,7 +100,7 @@ export const getRandomNumber = (maxValue) => {
 }
 
 export const getQuestion = (userChoice) => {
-	const choice = userChoice === 'hiragana' ? hiragana : katakana
+	const choice = userChoice === 'Hiragana' ? hiragana : katakana
 	const response = shuffleArray(choice).slice(0,4)
 	return {
 		options: response.map(item => item.question),

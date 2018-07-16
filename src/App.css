@@ -13,6 +13,17 @@ h2 {
 	width: 50%;
 }
 
+button {
+	width: 100%;
+	background: #ff6060;
+	border: 1px solid #ff6060;
+	border-radius: 0.2rem;
+	padding: 1rem;
+	font-size: 1.5rem;
+	color: white;
+	font-weight: bold;
+}
+
 /* Class Styling */
 
 .card {
