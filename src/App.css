@@ -1,88 +1,98 @@
 /* Element Styling */
 html {
-	color: whitesmoke;
-	overflow: hidden;
+    color: whitesmoke;
+    overflow: hidden;
 }
 
 body {
-	background-color: #5b4756;
+    background-color: #5b4756;
 }
 
 h2 {
-	display: inline-block;
-	width: 50%;
+    display: inline-block;
+    width: 50%;
+    margin: 0.2rem 0;
+}
+
+h3 {
+    margin: 0.5rem 0;
 }
 
 button {
-	width: 100%;
-	background: #ff6060;
-	border: 1px solid #ff6060;
-	border-radius: 0.2rem;
-	padding: 1rem;
-	font-size: 1.5rem;
-	color: white;
-	font-weight: bold;
+    width: 100%;
+    background: #ff6060;
+    border: 1px solid #ff6060;
+    border-radius: 0.2rem;
+    padding: 0.2rem;
+    font-size: 1.5rem;
+    color: white;
+    font-weight: bold;
 }
 
 /* Class Styling */
 
 .card {
-	padding: 1rem;
-	border: 0.1rem solid white;
-	border-radius: 0.2rem;
-	text-align: center;
+    padding: 1rem;
+    border: 0.1rem solid white;
+    border-radius: 0.2rem;
+    text-align: center;
 }
+
 .display {
-	margin: 0.5rem auto;
-	width: 100%;
-	font-size: 10rem;
-	border: 1px solid #ff6060;
-	border-radius: 0.2rem;
-	color: #ff6060;
+    margin: 0.2rem auto;
+    width: 100%;
+    font-size: 8rem;
+    border: 1px solid #ff6060;
+    border-radius: 0.2rem;
+    color: #ff6060;
 }
+
 .buttonGroup {
-	margin: auto;
+    margin: auto;
 }
+
 .buttonGroup button {
-	margin: 0.2rem;
-	width: calc(100%/2 - 0.4rem);
-	border: 0.1rem solid #ff6060;
-	border-radius: 0.2rem;
-	background-color: #ff6060;
-	font-size: 4rem;
-	color: #fff;
+    margin: 0.2rem;
+    width: calc(100%/2 - 0.4rem);
+    border: 0.1rem solid #ff6060;
+    border-radius: 0.2rem;
+    background-color: #ff6060;
+    font-size: 4rem;
+    color: #fff;
 }
+
 .option {
-	margin: 0.5rem 0.2rem;
-	width: calc(50% - 0.4rem);
-	padding: 1rem 0;
-	font-size: 1.5rem;
-	background-color: #83a9cc;
-	border: 1px solid #83a9cc;
-	border-radius: 0.2rem;
-	color: #fff;
+    margin: 0.5rem 0.2rem;
+    width: calc(50% - 0.4rem);
+    padding: 1rem 0;
+    font-size: 1.5rem;
+    background-color: #83a9cc;
+    border: 1px solid #83a9cc;
+    border-radius: 0.2rem;
+    color: #fff;
 }
 
 @media (max-width: 499px) {
-	.buttonGroup button {
-		width: calc(100vw/2 - 1.5rem);
-	}
-	.card {
-		width: calc(100vw - 2.2rem);
-		border: 0rem;
-	}
+    .buttonGroup button {
+        width: calc(100vw/2 - 1.5rem);
+    }
+
+    .card {
+        width: calc(100vw - 2.2rem);
+        border: 0rem;
+    }
 }
 
 @media (min-width: 500px) and (max-width: 749px) {
-	.card {
-		width: 70%;
-    margin: 4rem auto;
-	}
+    .card {
+        width: 70%;
+        margin: 4rem auto;
+    }
 }
 
 @media (min-width: 750px) {
-	.card {
-		width: 50%;
-    margin: 4rem auto;
-	}
+    .card {
+        width: 50%;
+        margin: 4rem auto;
+    }
 }
